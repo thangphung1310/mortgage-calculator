@@ -4,6 +4,7 @@ import NumberFormat from 'react-number-format';
 export default class Calculator extends React.Component {
     constructor(props) {
         super(props);
+
         this.state = {
             purchasePrice: '',
             downPayment: '',
@@ -29,18 +30,26 @@ export default class Calculator extends React.Component {
 
     handleClick = (e) => {
         e.preventDefault();
+        //extract values from state for easier calculation
         let purchasePrice = this.state.purchasePrice
         let downPayment = this.state.downPayment
         let interestRate = this.state.interestRate === 0 ? 0 : this.state.interestRate/100
-
+        
+        //Calculate principal = purchase price - down payment
         let principal = purchasePrice - downPayment;
 
+        //Calculate monthly interest rate by dividing annual rate by 12
 	    let monthlyInterestRate = interestRate === 0 ? 0 : interestRate/12;
+
+        //Calculate number of months of payment by multiplying by 12
 	    let numberOfMonthlyPayments = this.state.repaymentTime * 12;
+
+        //Apply the mortgage calculation formula and rounding it to 3 decimals
 	    let M = (((monthlyInterestRate * principal * (Math.pow((1+monthlyInterestRate), numberOfMonthlyPayments)))) / ((Math.pow((1+monthlyInterestRate), numberOfMonthlyPayments)) - 1));
         M = Math.round(M*1000)/1000
         M = M * 1000;
 
+        //Done calculation 
         this.setState({
             loanAmount: principal,
             prMonth: M
@@ -104,7 +113,7 @@ export default class Calculator extends React.Component {
                                     thousandsGroupStyle="thousand"
                                     value={this.state.repaymentTime}
                                     prefix=""
-                                    suffix="years"
+                                    suffix=" years"
                                     decimalSeparator="."
                                     displayType="text"
                                     type="text"

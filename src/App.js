@@ -3,8 +3,10 @@ import Calculator from './components/Calculator';
 
 function App() {
   return (
-    <div className="container mx-auto mt-8">
-      <Calculator />
+    <div className="flex h-screen justify-center items-center">
+      <div style={{width: "60%"}}>
+        <Calculator />
+      </div>
     </div>
   );
 }
