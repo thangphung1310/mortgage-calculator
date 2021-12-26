@@ -78,7 +78,7 @@ export default class Calculator extends React.Component {
                 <div className="grid lg:grid-cols-3 gap-6">
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">
+                            <span className="label-text text-black">
                                 <span>
                                     Purchase Price:&ensp;
                                 </span>
@@ -98,7 +98,7 @@ export default class Calculator extends React.Component {
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">
+                            <span className="label-text text-black">
                                 <span>
                                     Down Payment:&ensp;
                                 </span>
@@ -118,7 +118,7 @@ export default class Calculator extends React.Component {
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">
+                            <span className="label-text text-black">
                                 <span>
                                     Repayment Time:&ensp;
                                 </span>
@@ -141,7 +141,7 @@ export default class Calculator extends React.Component {
                 <div className="grid lg:grid-cols-3 gap-6">
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">
+                            <span className="label-text text-black">
                                 <span>
                                     Interest Rate:&ensp;
                                 </span>
@@ -161,7 +161,7 @@ export default class Calculator extends React.Component {
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Loan amount: </span>
+                            <span className="label-text text-black">Loan amount: </span>
                         </label>
                         <h2 className="text-xl">
                             <NumberFormat 
@@ -178,7 +178,7 @@ export default class Calculator extends React.Component {
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Estimate pr.month: </span>
+                            <span className="label-text text-black">Estimate pr.month: </span>
                         </label>
                         <h2 className="text-xl">
                             <NumberFormat 
