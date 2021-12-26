@@ -71,7 +71,7 @@ export default class Calculator extends React.Component {
 
     render() {
         return (
-            <div className="bg-indigo-600 rounded-3xl p-12 border-8 border-white">
+            <div className="bg-indigo-400 rounded-3xl p-12 border-8 border-white">
                 <div className="mb-8">
                     <h1 className="text-3xl">Mortgage Calculator</h1>
                 </div>
